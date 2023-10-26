@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#CLOCK
+
+o=0
+while [ $o -le $((13 * 60 - 1)) ]; do
+    if [ $((o % 60)) -eq 0 ]; then
+        echo "Hour: $((o / 60))"
+
+    else
+        echo $((o % 60))
+
+    fi
+
+    ((o++))
+done

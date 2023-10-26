@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#superNum
+
+o=1
+while [ $o -le 20 ]; do
+    case $o in
+    4)
+        echo bad luck from China
+        ;;
+    9)
+        echo bad luck from Japan
+        ;;
+    17)
+        echo bad luck from Italy
+        ;;
+    *)
+        echo $o
+        ;;
+    esac
+
+    ((o++))
+done

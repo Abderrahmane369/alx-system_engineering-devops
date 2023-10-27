@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#for_ls
+
+for item in *; do
+    if [[ $item != ".*" ]]; then
+        echo "$item" | cut -d '-' -f 2
+    fi
+done

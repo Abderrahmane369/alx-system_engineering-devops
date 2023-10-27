@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #listpross
 
-PS_FORMAT="pid,ppid,uid,user,%cpu,%mem,tty,stat,start,time,cmd"
-
-ps -eo $PS_FORMAT --forest
+ps auxv --forest

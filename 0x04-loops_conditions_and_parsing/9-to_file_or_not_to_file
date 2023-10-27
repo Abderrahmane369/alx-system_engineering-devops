@@ -2,7 +2,7 @@
 #fileMan
 
 if [ -e "school" ]; then
-    echo school file exist
+    echo school file exists
 
     if [ -s "school" ]; then
         echo school file is empty
@@ -11,7 +11,7 @@ if [ -e "school" ]; then
     fi
 
     if [ -f "school" ]; then
-        echo school file is regular
+        echo school is a regular file
     fi
 else
     echo school file does not exist

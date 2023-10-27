@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#okstop
+
+kill '$(pgrep "4-_to_infinity_and_beyond")'

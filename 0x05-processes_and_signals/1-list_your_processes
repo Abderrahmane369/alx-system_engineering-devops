@@ -2,3 +2,4 @@
 #listpross
 
 ps aux
+pstree -up

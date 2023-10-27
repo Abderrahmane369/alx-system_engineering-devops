@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#pids
+
+pgrep -l . | grep 'bash'

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #listpross
 
-ps auxv --forest
+ps aux --forest

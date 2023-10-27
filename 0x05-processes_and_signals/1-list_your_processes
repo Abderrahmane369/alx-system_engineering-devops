@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#listpross
+
+ps aux

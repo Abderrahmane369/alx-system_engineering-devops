@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#fizzbuzz
+
+o=0
+for i in {1..100}; do
+    case $o in
+    "$((i % 15))")
+        echo FizzBuzz
+        ;;
+    "$((i % 3))")
+        echo Fizz
+        ;;
+    "$((i % 5))")
+        echo Buzz
+        ;;
+    *)
+        echo $i
+        ;;
+    esac
+done

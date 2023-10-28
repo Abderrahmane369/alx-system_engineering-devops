@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
-#okstop
+#zaeaeaz
 
-kill "$(pgrep "bash")"
+process_name="4-to_infinity_and_beyond"
+pid=$(pgrep "$process_name")
+
+if [ -n "$pid" ]; then
+    kill "$pid"
+    echo "Terminated process with PID $pid."
+else
+    echo "Process $process_name not found."
+fi

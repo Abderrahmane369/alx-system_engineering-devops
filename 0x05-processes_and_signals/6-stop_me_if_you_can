@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #stopit
 
-pkill "bash"
+pkill -f "4-to_infinity_and_beyond"

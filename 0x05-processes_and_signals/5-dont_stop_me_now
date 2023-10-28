@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 #OKOK
 
-process_name="bash"
-pid=$(pgrep -o "$process_name")
-
-if [ -n "$pid" ]; then
-    kill "$pid"
-    echo "Terminated process '$process_name' with PID $pid."
-else
-    echo "Process '$process_name' not found or not running."
-fi
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+kill "$pid"

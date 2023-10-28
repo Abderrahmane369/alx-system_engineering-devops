@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#stopit
+
+pkill "bash"

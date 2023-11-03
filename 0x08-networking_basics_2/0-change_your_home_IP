@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 #USERCHANGEYOURHOMEIPPLEASEHIHACHIM
-sudo sed -i 's/127.0.0.1\s*localhost/127.0.0.2 localhost/' /etc/hosts
-
+sudo cp /etc/hosts ~/hosts.new
+sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new
+sed -i s/facebook.com/8.8.8.8/ ~/hosts.new
+sudo cp -f ~/hosts.new /etc/hosts

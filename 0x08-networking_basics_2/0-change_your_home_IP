@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#USERCHANGEYOURHOMEIPPLEASEHIHACHIM
+sudo sed -i "s/127.0.0.1/127.0.0.2/g" /etc/hosts
+sudo sed -i "s/facebook.com/8.8.8.8/g" /etc/hosts

@@ -1,0 +1,5 @@
+# HOSTINAtion
+Host 54.90.42.0
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no

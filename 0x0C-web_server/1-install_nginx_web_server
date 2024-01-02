@@ -2,5 +2,6 @@
 #istrozitation
 
 sudo apt install -y nginx
-echo "Hello World!" > /var/www/html/index.html
+sudo sed -i "s/listen [0-9]\+;/listen 80;/g" /etc/nginx/sites-available/default
+echo "Hello World!" >/var/www/html/index.html
 sudo service nginx restart

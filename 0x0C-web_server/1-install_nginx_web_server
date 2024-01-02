@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#istrozitation
+
+sudo apt install nginx
+sudo rm -f "/usr/share/nginx/html/index.html"
+sudo echo "Hello World!" > index.html
+sudo service nginx restart
+

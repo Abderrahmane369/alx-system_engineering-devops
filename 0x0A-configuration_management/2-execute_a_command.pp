@@ -1,6 +1,5 @@
 # task 3
 exec { 'killmenow':
-  command  => 'pkill -f killmenow',
-  onlyif   => 'pgrep -f killmenow',
-  provider => 'shell',
+  command => '/usr/bin/pkill -9 killmenow',
+  onlyif  => '/usr/bin/pgrep -f killmenow',
 }

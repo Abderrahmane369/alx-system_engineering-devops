@@ -2,7 +2,5 @@
 #istrozitation
 
 sudo apt install nginx
-sudo rm -f "/usr/share/nginx/html/index.html"
-echo "Hello World!" > index.html
+echo "Hello World!" > /var/www/html/index.html
 sudo service nginx restart
-

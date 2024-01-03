@@ -2,7 +2,7 @@
 #azeoaepaedoak
 sudo apt -y update
 sudo apt -y install nginx
-sh -c 'echo "Hello World!" | tee /var/www/html/index.html'
+sh -c 'echo "Hello World!" > /var/www/html/index.html'
 sh -c 'echo "server {
     listen 80;
     server_name localhost;
@@ -15,5 +15,5 @@ sh -c 'echo "server {
     location /redirect_me {
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
-}" >> /etc/nginx/sites-available/default'
+}" > /etc/nginx/sites-available/default'
 sudo service nginx restart

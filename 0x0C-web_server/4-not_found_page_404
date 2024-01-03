@@ -12,7 +12,6 @@ sh -c 'echo "server {
 
     location = /404.html {
         root /var/www/html;
-        internal;
     }
     location / {
         root /var/www/html;

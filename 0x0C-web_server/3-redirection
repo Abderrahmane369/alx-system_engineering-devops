@@ -13,7 +13,7 @@ sh -c 'echo "server {
     }
     
     location /redirect_me {
-        return 301 http://54.144.144.29
+        return 301 http://54.144.144.29;
     }
 }" >> /etc/nginx/sites-available/default'
 sudo service nginx restart

@@ -2,8 +2,8 @@
 #istrozitation
 
 sudo apt install -y nginx
-echo "Hello World!" >/var/www/html/index.html
-echo "server {
+sh -c 'echo "Hello World!" >/var/www/html/index.html'
+sh -c 'echo "server {
     listen 80;
     server_name localhost;
 
@@ -11,5 +11,5 @@ echo "server {
         root /var/www/html;
         index index.html;
     }
-}" >> /etc/nginx/sites-available/default
+}" >> /etc/nginx/sites-available/default'
 sudo service nginx restart

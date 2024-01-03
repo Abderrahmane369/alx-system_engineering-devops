@@ -5,7 +5,7 @@ sudo apt -y install nginx
 sh -c 'echo "Hello World!" > /var/www/html/index.html'
 sh -c 'echo "server {
     listen 80;
-    server_name localhost;
+    server_name 54.144.144.29;
 
     location / {
         root /var/www/html;

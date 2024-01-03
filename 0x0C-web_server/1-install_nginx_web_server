@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #istrozitation
-
-sudo apt install -y nginx
+sudo apt -y update
+sudo apt -y install nginx
 sh -c 'echo "Hello World!" | tee /var/www/html/index.html'
 sh -c 'echo "server {
     listen 80;

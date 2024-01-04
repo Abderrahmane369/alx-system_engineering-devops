@@ -3,7 +3,7 @@
 apt-get -y update
 apt-get -y install nginx
 sh -c 'echo "Hello World!" > /var/www/html/index.html'
-echo "Ceci n'est pas une page" > /var/www/html/404.html
+sh -c 'echo "Ceci n'\''est pas une page" > /var/www/html/404.html'
 sh -c 'echo "server {
     listen 80;
     server_name 54.144.144.29;

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Install apache2
+service start apache2
+echo "Hello Holberton School!" > /tmp/index.html

@@ -7,8 +7,8 @@ frontend front
 
 backend back
     balance roundrobin
-    server 440927-web-01 54.144.144.29:80 check
-    server 440927-web-02 54.158.205.242:80 check
-    " >> /etc/haproxy/haproxy.cfg'
+    server web1 54.144.144.29:80 check
+    server web2 54.158.205.242:80 check
+    " | sudo tee /etc/haproxy/haproxy.cfg'
 
 sudo service haproxy restart

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #ezaeazeazeazea
+sudo service nginx start
 sudo rm -f /etc/nginx/sites-available/default
 
 sh -c 'echo "server {

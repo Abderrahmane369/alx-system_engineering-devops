@@ -1,37 +1,17 @@
 #!/bin/bash
 
-sudo ssh -i ~/.ssh/school ubuntu@54.144.144.29 <<EOF
-    sudo rm -f /etc/nginx/sites-available/default
+sudo rm -f /etc/nginx/sites-available/default
 
-    sh -c 'echo "server {
-        listen 80;
-        server_name localhost;
+sh -c 'echo "server {
+    listen 80;
+    server_name localhost;
 
-        location / {
-            root /var/www/html;
-            index index.html;
-            add_header X-Served-By $(hostname);
-            autoindex on;
-     }
-    }" | sudo tee /etc/nginx/sites-available/default'
+    location / {
+        root /var/www/html;
+        index index.html;
+        add_header X-Served-By $(hostname);
+        autoindex on;
+    }
+}" | sudo tee /etc/nginx/sites-available/default'
 
-    sudo service nginx restart
-EOF
-
-sudo ssh -i ~/.ssh/school ubuntu@54.158.205.242 <<EOF
-    sudo rm -f /etc/nginx/sites-available/default
-
-    sh -c 'echo "server {
-        listen 80;
-        server_name localhost;
-
-        location / {
-            root /var/www/html;
-            index index.html;
-            add_header X-Served-By $(hostname);
-            autoindex on;
-     }
-    }" | sudo tee /etc/nginx/sites-available/default'
-
-    sudo service nginx restart
-EOF
+sudo service nginx restart

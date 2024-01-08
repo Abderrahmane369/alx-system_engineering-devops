@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #ezaeazeazeazea
-sudo rm -f /etc/nginx/sites-available/default
-
+sudo apt-get -y update
+sudo apt-get -y install nginx
 sh -c 'echo "server {
     listen 80;
     server_name localhost;
@@ -12,6 +12,7 @@ sh -c 'echo "server {
         add_header X-Served-By $(hostname);
         autoindex on;
     }
-}" | sudo tee /etc/nginx/sites-available/default'
+}" >> /etc/nginx/sites-available/default'
 
 sudo service nginx restart
+

@@ -11,4 +11,4 @@ backend back
     server web2 54.158.205.242:80 check
     " >> /etc/haproxy/haproxy.cfg'
 
-sudo service haproxy restart
+sudo service restart haproxy

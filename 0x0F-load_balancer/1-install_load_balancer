@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#ezaazeoo
+sh -c 'echo "
+frontend front
+    bind *:80
+    default_backend back
+
+backend back
+    balance roundrobin
+    server 440927-web-01 54.144.144.29:80 check
+    server 440927-web-02 54.158.205.242:80 check
+    " >> /etc/haproxy/haproxy.cfg'
+
+sudo service haproxy restart

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #ezaazeoo
+sudo apt-get -y update
+sudo apt-get install -y haproxy
 sh -c 'echo "
 frontend front
     bind *:80
@@ -11,4 +13,4 @@ backend back
     server web2 54.158.205.242:80 check
     " >> /etc/haproxy/haproxy.cfg'
 
-sudo service restart haproxy
+sudo service haproxy restart

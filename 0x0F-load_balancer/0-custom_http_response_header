@@ -4,7 +4,7 @@ host=$(hostname)
 apt-get -y update
 apt-get -y install nginx
 echo "server {
-    listen 80;
+    listen 80 default_server;
 
     location / {
         add_header X-Served-By $host;

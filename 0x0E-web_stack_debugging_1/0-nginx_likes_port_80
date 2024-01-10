@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#the script must accept the argument string and display all active processes matching that string, very similar to pgrep
+sudo apt-get update -y
+sudo apt-get install -y nginx
+sudo service nginx start

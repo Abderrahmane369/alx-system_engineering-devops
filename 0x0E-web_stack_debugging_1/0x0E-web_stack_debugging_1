@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#babab lalal mmmmm z
-sudo apt-get update -y
-sudo apt-get install -y nginx
-sudo service nginx start

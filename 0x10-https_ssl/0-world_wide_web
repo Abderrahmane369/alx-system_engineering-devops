@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#lazoefdjngjjfpoas$m7
+
+dom=$1
+subdom=$2
+
+echodig() {
+    dest=$(dig +short "$1.$dom")
+    rec=$(dig "$1.$dom" | grep -A1 'QUESTION SECTION:' | awk 'NR==2 {print $3}')
+
+    echo "The subdomain $1 is a $rec record and points to $dest"
+}
+
+if [ $# -ne 1 ]; then
+    echodig "$subdom"
+else
+    echodig "www"
+    echodig "lb-01"
+    echodig "web-01"
+    echodig "web-02"
+fi

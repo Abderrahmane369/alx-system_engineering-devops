@@ -2,5 +2,5 @@
 #the script must accept the argument string and display all active processes matching that string, very similar to pgrep
 sudo apt-get update -y
 sudo apt-get install -y nginx
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 sudo service nginx start

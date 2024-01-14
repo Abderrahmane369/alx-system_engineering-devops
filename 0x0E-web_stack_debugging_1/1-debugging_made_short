@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #the script must accept the argument string and display all active processes matching that string, very similar to pgrep
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
 sudo kill "$(pgrep nginx | head -1)"

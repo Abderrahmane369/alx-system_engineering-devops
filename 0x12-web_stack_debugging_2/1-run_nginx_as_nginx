@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#ubunatu ogutawua
+sh -c 'echo "user nginx;" >> /etc/nginx/nginx.conf'
+sed -i '/^http {/a \
+        server {\
+            listen 8080 default_server;\
+        }' '/etc/nginx/nginx.conf'
+sudo service nginx restart

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#pikachiken
+date=$(date +%d-%m-%Y)
+
+mysqldump -u root -p"$1" --all-databases > backup.sql
+tar -czvf "$date.tar.gz" backup.sql
+

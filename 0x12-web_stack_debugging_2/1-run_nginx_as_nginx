@@ -6,3 +6,4 @@ sed -i '/^http {/a \
             listen 8080 default_server;\
         }' '/etc/nginx/nginx.conf'
 sudo service nginx restart
+

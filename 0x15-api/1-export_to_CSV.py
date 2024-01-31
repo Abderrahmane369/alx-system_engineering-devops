@@ -16,8 +16,10 @@ if __name__ == '__main__':
                     == employee.get('id'), todos))
 
     with open(f'{argv[1]}.csv', 'w', encoding='utf-8') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quotechar="'")
 
         for t in emptodos:
-            writer.writerow((f'"{t["userId"]}"', f'"{employee["username"]}"',
-                             f'"{t["completed"]}"', f'"{t["title"]}"'))
+            writer.writerow(('"{}"'.format(t["userId"]),
+                             '"{}"'.format(employee["username"]),
+                             '"{}"'.format(t["completed"]),
+                             '"{}"'.format(t["title"])))

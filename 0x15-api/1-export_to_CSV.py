@@ -15,7 +15,7 @@ if __name__ == '__main__':
     emptodos = list(filter(lambda e: e.get('userId')
                     == employee.get('id'), todos))
 
-    with open(f'{argv[1]}.py', 'w', encoding='utf-8') as f:
+    with open(f'{argv[1]}.csv', 'w', encoding='utf-8') as f:
         writer = csv.writer(f)
 
         for t in emptodos:

@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     with open(f'{argv[1]}.json', 'w', encoding='utf-8') as f:
         userTasks = {
-            f'{employee.get("username")}': []
+            f'{employee.get("id")}': []
         }
         for t in emptodos:
             task = {
@@ -25,6 +25,6 @@ if __name__ == '__main__':
                 'completed': t['completed'],
                 'username': employee['username']
             }
-            userTasks.get(f'{employee.get("username")}').append(task)
+            userTasks.get(f'{employee.get("id")}').append(task)
 
         f.write(json.dumps(userTasks))

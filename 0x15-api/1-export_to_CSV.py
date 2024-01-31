@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """logar"""
+import csv
 import json
 import requests as rq
 from sys import argv
-import csv
 
 if __name__ == '__main__':
     users = rq.get(f'https://jsonplaceholder.typicode.com/users/{argv[1]}')

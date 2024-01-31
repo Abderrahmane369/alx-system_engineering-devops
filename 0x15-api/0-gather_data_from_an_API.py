@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """logar"""
-import requests as rq
 import json
+import requests as rq
 from sys import argv
 
 if __name__ == '__main__':

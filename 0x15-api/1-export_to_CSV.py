@@ -19,5 +19,5 @@ if __name__ == '__main__':
         writer = csv.writer(f)
 
         for t in emptodos:
-            writer.writerow((f'"{t['userId']}"', f'"{employee['username']}"',
-                             f'"{t['completed']}"', f'"{t['title']}"'))
+            writer.writerow((f'"{t["userId"]}"', f'"{employee["username"]}"',
+                             f'"{t["completed"]}"', f'"{t["title"]}"'))

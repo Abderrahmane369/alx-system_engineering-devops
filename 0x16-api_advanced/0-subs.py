@@ -9,7 +9,7 @@ def number_of_subscribers(subreddit):
     headers = {'User-agent': 'redddit'}
 
     response = requests.get(
-        f'https://www.reddit.com/r/{sys.argv[1]}/about.json',
+        f'https://www.reddit.com/r/{subreddit}/about.json',
         headers=headers
     )
 

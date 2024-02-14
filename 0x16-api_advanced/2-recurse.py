@@ -4,7 +4,7 @@ import requests
 import json
 
 
-def top_ten(subreddit):
+def recurse(subreddit, hot_list=[]):
     """READIT"""
     headers = {'User-agent': 'redddit'}
 
@@ -16,7 +16,12 @@ def top_ten(subreddit):
     data = response.json()
 
     if not data.get('data'):
-        return print('None')
+        return None
 
-    for post in data['data']['children'][:10]:
-        print(post['data']['title'])
+    posts = data['data']['children']
+
+    if len(posts) != len(hot_list):
+        hot_list.append(posts[len(hot_list)]['data']['title'])
+        return recurse(subreddit, hot_list)
+
+    return hot_list
